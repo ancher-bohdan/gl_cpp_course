@@ -44,6 +44,19 @@ class custom_string {
 		{
 			std::cout << "IN MOVE CONSTRUCTOR" << std::endl;
 		}
+
+		~custom_string()
+		{
+			std::cout << "In destructor" << std::endl;
+			if(data != nullptr)
+			{
+				delete[] data;
+				data = nullptr;
+			}
+			strlen = 0;
+		}
+
+		int index_of(char ch);
 };
 
 #endif
