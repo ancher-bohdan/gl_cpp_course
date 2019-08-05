@@ -34,7 +34,7 @@ class custom_string {
 		}
 
 		custom_string(const custom_string& input)
-			: data(new char(*input.data)), strlen(input.strlen) 
+			: data(input.data), strlen(input.strlen) 
 		{
 			std::cout << "IN COPY CONSTRUCTOR" << std::endl;
 		}
@@ -55,6 +55,9 @@ class custom_string {
 			}
 			strlen = 0;
 		}
+
+		bool operator==(const custom_string& str);
+		char operator[](size_t index);
 
 		int index_of(char ch);
 };
