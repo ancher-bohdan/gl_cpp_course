@@ -14,6 +14,8 @@ int main()
 	
 	std::cout << (*str == copy) << std::endl;
 
+	copy.append(*str);
+
 	delete str;
 
 	std::cout << "End of program " << std::endl;

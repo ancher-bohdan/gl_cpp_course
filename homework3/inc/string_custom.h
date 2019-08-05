@@ -58,8 +58,12 @@ class custom_string {
 
 		bool operator==(const custom_string& str);
 		char operator[](size_t index);
+		custom_string& operator=(const custom_string& other);
+		custom_string& operator+=(const custom_string& other);
 
 		int index_of(char ch);
+		bool append(const custom_string& str);
+		bool append(const char *str);
 };
 
 #endif
