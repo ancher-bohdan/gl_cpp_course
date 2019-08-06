@@ -16,6 +16,24 @@ int main()
 
 	copy.append(*str);
 
+	copy.append("again");
+
+	copy += (*str);
+
+	custom_string first("Hello");
+	custom_string second(" world");
+	custom_string third = first + second;
+	std::cout << third << std::endl;
+
+	std::cout << "check substr: " << third.substr("ell") << std::endl;
+	std::cout << "check swap: " << str->swap() << std::endl;
+
+	std::cout << "Enter some string(without spaces):" << std::endl;
+	std::cin >> third;
+	std::cout << "Constructed string is: " << third << std::endl;
+
+
+ 
 	delete str;
 
 	std::cout << "End of program " << std::endl;

@@ -9,7 +9,7 @@
 class custom_string {
 	private :
 		char* data;
-		int strlen;
+		unsigned int strlen;
 	
 	public :
 		custom_string() = delete;
@@ -57,13 +57,24 @@ class custom_string {
 		}
 
 		bool operator==(const custom_string& str);
+		bool operator!=(const custom_string& str);
 		char operator[](size_t index);
 		custom_string& operator=(const custom_string& other);
 		custom_string& operator+=(const custom_string& other);
+		custom_string operator+(const custom_string& other);
+		friend std::istream& operator>>(std::istream& is, custom_string& str);
+		friend std::ostream& operator<<(std::ostream& os, const custom_string& str);
 
 		int index_of(char ch);
-		bool append(const custom_string& str);
-		bool append(const char *str);
+		int compare(const custom_string& str);
+		unsigned int length();
+		bool resize(unsigned int length);
+		void clear();
+		int substr(const char* str);
+		custom_string& swap();
+		custom_string& insert(const char* str);
+		custom_string& append(const char* str);
+		custom_string& append(const custom_string& str);
 };
 
 #endif
