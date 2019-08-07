@@ -32,8 +32,6 @@ int main()
 	std::cin >> third;
 	std::cout << "Constructed string is: " << third << std::endl;
 
-
- 
 	delete str;
 
 	std::cout << "End of program " << std::endl;

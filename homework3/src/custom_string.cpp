@@ -144,11 +144,11 @@ custom_string& custom_string::swap()
 	if(this->data == nullptr)
 		return *this;
 
-	for(unsigned int i = 0; i <= ((strlen - 1) >> 1); i++ )
+	for(unsigned int i = 0; i <= ((strlen - 2) >> 1); i++ )
 	{
 		char tmp = data[i];
 		data[i] = data[strlen - i - 2];
-		data[strlen - i] = tmp;
+		data[strlen - i - 2] = tmp;
 	}
 
 	return *this;
