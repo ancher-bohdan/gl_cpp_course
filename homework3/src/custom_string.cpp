@@ -154,6 +154,35 @@ custom_string& custom_string::swap()
 	return *this;
 }
 
+custom_string& custom_string::insert(const char* str, int position)
+{
+	char *new_data;
+	unsigned int size = 0;
+
+	if(this->data == nullptr)
+		return *this;
+
+	while( (str[size++] != '\0') && (size != STRING_MAX_LENGTH) );
+
+	if((size + position - 1) > this->strlen )
+	{
+		new_data = new char[size + position];
+		std::copy(this->data, this->data + position, new_data);
+		std::copy(str, str + size - 1, new_data + position);
+		
+		delete[] this->data;
+
+		this->data = new_data;
+		this->strlen = size + position;
+	}
+	else
+	{
+		std::copy(str, str + size - 1, this->data + position);
+	}
+	return *this;
+
+}
+
 bool custom_string::operator==(const custom_string& str)
 {
 	return this->compare(str) == 0 ? true : false;

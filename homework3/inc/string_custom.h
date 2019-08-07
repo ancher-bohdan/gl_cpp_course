@@ -72,7 +72,7 @@ class custom_string {
 		void clear();
 		int substr(const char* str);
 		custom_string& swap();
-		custom_string& insert(const char* str);
+		custom_string& insert(const char* str, int position);
 		custom_string& append(const char* str);
 		custom_string& append(const custom_string& str);
 };
