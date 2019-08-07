@@ -20,13 +20,13 @@ int main()
 	std::cout << "I`ll append your perfect string with my garbage: " << third.append("@#$BlaBlaBla:(((") << std::endl;
 	std::cout << "Check if my garbage is present?: " << ((third.substr("BlaBla") != -1) ? "Yep! It present" : "No. WTF???") << std::endl;
 
-	std::cout << "My garbage are at " << third.substr("BlaBla") << " position" << std::endl;
+	std::cout << "My garbage are at " << third.substr("BlaBla") << " position" << std::endl << std::endl;
 
-	std::cout << "HE HE HE!!!! Let me mess with your string a little bit more!!!!" << std::endl << std::endl;
+	std::cout << "HE HE HE!!!! Let me mess with your string a little bit more!!!!" << std::endl;
 
 	third.insert("GARBAGE!!!!", 1).append(first).swap();
 
-	std::cout << "Now your string is " << third;
+	std::cout << "Now your string is " << third << std::endl;
 
 	return 0;
 }

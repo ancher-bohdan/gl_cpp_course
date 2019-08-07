@@ -5,8 +5,6 @@ int custom_string::index_of(char ch)
 {
 	unsigned int result = 0;
 
-	std::cout << "Index of" << std::endl;
-
 	for(; result < this->strlen; result++)
 	{
 		if(this->data[result] == ch)
@@ -200,8 +198,6 @@ char custom_string::operator[](size_t index)
 
 custom_string& custom_string::operator=(const custom_string& other)
 {
-	std::cout << "IN OVERLOADED ASSIGMEND OPERATOR" << std::endl;
-
 	if(this != &other)
 	{
 		if(strlen != other.strlen)

@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.0)
 
-set(PROJECT_NAME "homework3")
+set(PROJECT_NAME "homework3-4")
 
 project(${PROJECT_NAME} VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g  -Wall -Wextra -Wshadow -Wundef -Wno-missing-field-initializers")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wshadow -Wundef -Wno-missing-field-initializers")
 
 include_directories(./inc)
 

@@ -19,8 +19,6 @@ class custom_string {
 
 			int size = 0;
 
-			std::cout << "IN CONSTRUCTOR" << std::endl;
-
 			while( (input_text[size++] != '\0') && (size != STRING_MAX_LENGTH) );
 
 			data = new char[size];
@@ -36,18 +34,15 @@ class custom_string {
 		custom_string(const custom_string& input)
 			: data(input.data), strlen(input.strlen) 
 		{
-			std::cout << "IN COPY CONSTRUCTOR" << std::endl;
 		}
 
 		custom_string(custom_string&& input)
 			: data(std::exchange(input.data, nullptr)), strlen(std::exchange(input.strlen, 0))
 		{
-			std::cout << "IN MOVE CONSTRUCTOR" << std::endl;
 		}
 
 		~custom_string()
 		{
-			std::cout << "In destructor" << std::endl;
 			if(data != nullptr)
 			{
 				delete[] data;
