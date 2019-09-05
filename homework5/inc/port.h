@@ -1,7 +1,7 @@
 #include <iostream>
 
 class Port {
-private:
+protected:
     char* brand;
     char style[20]; // e.g. tawny, ruby, vintage
     int bottles;

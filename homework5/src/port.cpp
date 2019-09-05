@@ -1,6 +1,9 @@
-#include <csting>
+#include <cstring>
+#include <iostream>
 
-Port::Port(const char* br = "none", const char* st = "none", int b = 0)
+#include "port.h"
+
+Port::Port(const char* br, const char* st, int b)
 {
 	brand = new char[strlen(br)];
 	std::copy(br, br + strlen(br), brand);
@@ -39,7 +42,7 @@ Port& Port::operator= (const Port& p)
 		std::copy(p.brand, p.brand + strlen(p.brand), brand);
 		std::copy(p.style, p.style + (sizeof(p.style) / sizeof(p.style[0])), style);
 
-		boottles = p.bottles;
+		bottles = p.bottles;
 	}
 	return *this;
 }
@@ -55,5 +58,18 @@ Port& Port::operator-= (int b)
 	if(bottles > 0)
 		bottles -= b;
 	return *this;
+}
+
+void Port::Show() const
+{
+	std::cout << "Brand: " << brand << std::endl;
+	std::cout << "Kind: " << style << std::endl;
+	std::cout << "Bottles: " << bottles << std::endl;
+}
+
+std::ostream& operator<< (std::ostream& os, const Port& p)
+{
+	os << p.brand << ", " << p.style << ", " << p.bottles;
+	return os;
 }
 

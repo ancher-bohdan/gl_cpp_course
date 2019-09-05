@@ -12,5 +12,6 @@ include_directories(./inc)
 
 add_executable(${PROJECT_NAME}
     ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/code.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/port.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/vintage_port.cpp
 )
