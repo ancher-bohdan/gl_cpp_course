@@ -15,13 +15,15 @@ VintagePort::VintagePort(const char* br, int b, const char* nn, int y) :
 	Port(br, "vintage", b)
 {
 	nickname = new char[strlen(nn)];
-	std::copy(nickname, nickname + strlen(nickname), nn);
+	std::copy(nn, nn + strlen(nn), nickname);
 	year = y;
 }
 
 VintagePort::VintagePort(const VintagePort& vp) :
-	nickname(vp.nickname), year(vp.year), brand(vp.brand), bottles(vp.bottles) 
+	nickname(vp.nickname), year(vp.year)
 {
+	brand = vp.brand;
+	bottles = vp.bottles;
 }
 
 VintagePort& VintagePort::operator= (const VintagePort & vp)
