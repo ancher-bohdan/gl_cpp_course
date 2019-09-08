@@ -10,8 +10,14 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -g -Wextra -Wshadow -Wundef -Wno-m
 
 include_directories(./inc)
 
-add_executable(${PROJECT_NAME}
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/port.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/vintage_port.cpp
+add_library (
+	portvines SHARED
+	${CMAKE_CURRENT_SOURCE_DIR}/src/port.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/vintage_port.cpp
 )
+
+add_executable(${PROJECT_NAME}
+    ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+)
+
+target_link_libraries(${PROJECT_NAME} portvines)
