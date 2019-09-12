@@ -1,3 +1,7 @@
+#include "Wine.h"
+
+#include <iostream>
+
 int main() {
     using std::cin;
     using std::cout;
@@ -11,7 +15,7 @@ int main() {
     cin >> yrs;
 
     Wine holding(lab, yrs);
-    holding.getBottles();
+    /*holding.getBottles();
     holding.show(); // print wine info
 
     constexpr int kYears = 3;
@@ -21,6 +25,6 @@ int main() {
     Wine more("Chianti", kYears, y, b);
     more.show();
     cout << "Total bottles for " << more.label() << ": " << more.sum() << endl;
-
+*/
     return 0;
 }

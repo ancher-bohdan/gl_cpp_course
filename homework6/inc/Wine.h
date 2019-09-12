@@ -1,3 +1,6 @@
+#ifndef __WINE__
+#define __WINE__
+
 #include <string>
 #include <valarray>
 #include <utility>
@@ -8,8 +11,8 @@ class Wine
 		using ArrayIntT = std::valarray<int>;
 		using PairArrayT = std::pair<ArrayIntT, ArrayIntT>;
 
-		std::string name;
-		PairArrayT pair;
+		std::string *name;
+		PairArrayT *pair;
 	
 	public:
 		Wine() = default;
@@ -19,4 +22,6 @@ class Wine
 		int get_bottles(int year);
 		std::string label();
 		int sum();
-}
+};
+
+#endif
