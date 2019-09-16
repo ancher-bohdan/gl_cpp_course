@@ -18,8 +18,10 @@ class Wine
 		Wine() = default;
 		Wine(const char* label, int ny, const int yr[], const int bot[]);
 		Wine(const char* label, int ny);
+		~Wine();
 
-		int get_bottles(int year);
+		int getBottles(int year);
+		void getBottles();
 		std::string label();
 		int sum();
 };
