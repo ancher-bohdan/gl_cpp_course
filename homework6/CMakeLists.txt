@@ -8,8 +8,8 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -g -Wextra -Wshadow -Wundef -Wno-missing-field-initializers")
 
-set(LIB_IMPLEMENTATION "composition")
-#set(LIB_IMPLEMENTATION "inheritance")
+#set(LIB_IMPLEMENTATION "composition")
+set(LIB_IMPLEMENTATION "inheritance")
 set(PATH_TO_LIB_SRC "./libwinesrc/${LIB_IMPLEMENTATION}")
 
 include_directories(./${PATH_TO_LIB_SRC}/inc)
