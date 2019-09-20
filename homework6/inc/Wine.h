@@ -24,6 +24,7 @@ class Wine
 		void getBottles();
 		std::string label();
 		int sum();
+		void show();
 };
 
 #endif

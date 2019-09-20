@@ -15,16 +15,17 @@ int main() {
     cin >> yrs;
 
     Wine holding(lab, yrs);
-    /*holding.getBottles();
-    holding.show(); // print wine info*/
+    holding.getBottles();
+    holding.show(); // print wine info
 
     constexpr int kYears = 3;
     int y[kYears] = { 1993, 1995, 1998 };
     int b[kYears] = { 48, 60, 72 };
 
     Wine more("Chianti", kYears, y, b);
-//    more.show();
+    more.show();
     cout << "Total bottles for " << more.label() << ": " << more.sum() << endl;
+    
     cout << "We have " << more.getBottles(1995) << " at 1995`s" << endl;
 
     return 0;
