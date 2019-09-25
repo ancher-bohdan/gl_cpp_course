@@ -12,9 +12,9 @@ class AudioDecoder : public Decoder
 
 	public:
 		AudioDecoder(std::string& file_path) : executed_file_path(file_path) {}
-		~AudioDecoder() {} 
+		~AudioDecoder() { } 
 
 		void Decode();
-}
+};
 
 #endif

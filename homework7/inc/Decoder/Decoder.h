@@ -4,10 +4,10 @@
 class Decoder
 {
 	public:
-		Decode() = default; 
-		virtual ~Decode();
+		Decoder() = default; 
+		virtual ~Decoder() { }
 
-		virtual void Decode();
-}
+		virtual void Decode() {}
+};
 
 #endif

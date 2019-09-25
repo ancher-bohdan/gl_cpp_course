@@ -11,7 +11,7 @@ class Parser
 		Parser() = default;
 		~Parser() {}
 
-		Decoder parse(std::string& path_to_file)
-}
+		Decoder* parse(std::string& path_to_file);
+};
 
 #endif

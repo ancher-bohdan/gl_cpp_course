@@ -11,13 +11,15 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -g -Wextra -Wshadow -Wundef -Wno-m
 include_directories(./inc)
 
 add_library (
-	portvines SHARED
-	${CMAKE_CURRENT_SOURCE_DIR}/src/port.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/src/vintage_port.cpp
+	simplayer SHARED
+	${CMAKE_CURRENT_SOURCE_DIR}/src/Parser.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/Player.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/Decoder/AudioDecoder.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/Decoder/VideoDecoder.cpp
 )
 
 add_executable(${PROJECT_NAME}
-    ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+   ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} portvines)
+target_link_libraries(${PROJECT_NAME} simplayer)
