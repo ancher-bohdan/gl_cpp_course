@@ -14,12 +14,15 @@ void Player::play()
 {
 	if(!is_played)
 	{
-		Decoder *d;
-
-		d = parser.parse(track_list[0]);
-		d->Decode();
-
 		is_played = true;
+		for(std::string& song : track_list)
+		{
+			Decoder *d;
+
+			d = parser.parse(song);
+			d->Decode();
+
+		}
 	}
 }
 
